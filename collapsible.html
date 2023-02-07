@@ -1,0 +1,6 @@
+<div *ngFor="let item of items">
+  <button class="collapsible" (click)="item.isOpen = !item.isOpen">{{item.title}}</button>
+  <div class="content" [ngClass]="{'show': item.isOpen}" [style.maxHeight.px]="item.isOpen ? contentHeight : 0">
+    {{item.content}}
+  </div>
+</div>
